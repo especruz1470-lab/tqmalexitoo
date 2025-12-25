@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Navidad</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <div class="phone">
+    <div class="card">
+      <div class="text-overlay">
+        <h1>Feliz Navidad Alexito. 🎄💛</h1>
+        <p>
+          Gracias por estar, por tu cálida compañía y por lo bonito que compartimos en este corto
+          o largo tiempo, me hace feliz tenerte en mi vida.<br>
+          Deseo que disfrutes cada uno de tus días, te quiero mucho.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="navidadAudio" autoplay loop>
+    <source src="Goku les desea feliz navidad 🎁.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Forzar reproducción al primer toque -->
+  <script>
+    document.addEventListener('click', () => {
+      const audio = document.getElementById('navidadAudio');
+      audio.play().catch(() => {});
+    }, { once: true });
+  </script>
+
+</body>
+</html>
